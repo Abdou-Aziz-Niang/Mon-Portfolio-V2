@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos | Mon Parcours</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Styles spécifiques pour l'organisation de la page À Propos */
+        .hero-about {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f4f7f6;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .parcours {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-top: 30px;
+        }
+
+        .parcours ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .parcours li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        /* Petit point stylisé pour la liste du parcours */
+        .parcours li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="a-propos.html" class="active">À Propos</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="about-container">
+        
+        <section class="hero-about">
+            <div class="profil-section">
+                <img src="../images/AAN.jpeg" alt="Photo de profil professionnelle" class="photo-profil">
+                <h1>Qui suis-je ?</h1>
+                <p>Passionné par l'informatique, je me spécialise dans la création d'applications robustes et la gestion d'infrastructures réseaux sécurisées.</p>
+            </div>
+        </section>
+
+        <section class="competences-grid">
+            
+            <div class="card-competence">
+                <h3><i class="fas fa-code"></i> Développement</h3>
+                <div class="badges">
+                    <span class="badge html">HTML5</span>
+                    <span class="badge css">CSS3</span>
+                    <span class="badge php">PHP</span>
+                    <span class="badge js">JavaScript</span>
+                    <span class="badge python">Python</span>
+                    <span class="badge php">Langage C</span>
+                    <span class="badge js">JAVA</span>
+                    <span class="badge python">Merise</span>
+                </div>
+            </div>
+
+            <div class="card-competence">
+                <h3><i class="fas fa-network-wired"></i> Infra & Réseau</h3>
+                <p>Administration Réseaux</p>
+                <div class="progress-bar"><div class="progress" style="width: 85%;">85%</div></div>
+                
+                <p>Virtualisation (VirtualBox)</p>
+                <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
+            </div>
+
+            <div class="card-competence">
+                <h3><i class="fas fa-microchip"></i> IoT & Hardware</h3>
+                <div class="badges">
+                    <span class="badge arduino">Arduino</span>
+                    <span class="badge esp">ESP32</span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="parcours">
+            <h2><i class="fas fa-graduation-cap"></i> Mon Parcours</h2>
+            Mon cursus en Génie Logiciel m'a permis d'acquérir une rigueur méthodologique, notamment dans l'analyse des besoins et la modélisation de données.
+             Parallèlement, ma formation en Administration Réseau me donne une vision globale des enjeux de connectivité et de sécurité.
+              Je crois fermement que l'avenir de l'informatique réside dans l'interconnexion intelligente des systèmes (IoT) et la virtualisation des ressources pour une gestion plus flexible et durable
+            <ul>
+                <li><strong>2026 - Présent :</strong> L2 Génie Logiciel & Réseaux [ESTM]</li>
+                <li><strong>2023 :</strong> Baccalauréat L2 </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 - Portfolio Professionnel | Développeur & Administrateur Réseau</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/public-profile/settings/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

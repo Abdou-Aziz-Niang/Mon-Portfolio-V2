@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets | Réalisations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Style spécifique pour les images de projet */
+        .project-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .skill-card.project-card {
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        
+        .project-card h3, .project-card p, .project-card .badges, .project-card .project-links {
+            padding: 0 20px;
+        }
+
+        .project-card p {
+            font-size: 0.9rem;
+            color: #555;
+            flex-grow: 1; /* Pousse le contenu vers le bas pour aligner les boutons */
+        }
+        
+        .project-card .badges {
+            margin-top: 10px;
+        }
+
+        .project-links {
+            padding-bottom: 20px;
+            margin-top: 15px;
+        }
+
+        /* Style du bouton GitHub */
+        .github-link {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: background 0.3s ease;
+        }
+
+        .github-link:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À Propos</a></li>
+            <li><a href="projets.html" class="active">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="about-container">
+        <section class="hero-section">
+            <h1>Mes Réalisations</h1>
+             <div style="text-align: center; margin: 30px 0; background: #f9f9f9; padding: 20px; border-radius: 10px; border: 1px solid #ddd;">
+    <p style="margin-bottom: 10px; font-weight: bold;">Rechercher un projet par mot-clé :</p>
+    <form action="#">
+        <input type="text" placeholder="Ex: Arduino, PHP, MySQL..." style="padding: 10px; width: 250px; border: 1px solid #ccc; border-radius: 5px;">
+        <button type="submit" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Filtrer</button>
+    </form>
+</div>
+            <p>Voici les projets techniques sur lesquels j'ai travaillé, illustrés par des captures d'écran.</p>
+        </section>
+
+        <div class="skills-grid">
+            
+            <article class="skill-card project-card">
+                <img src="../images/gestionnaire de stock.png" alt="Projet Gestion de Stock" class="project-img">
+                <h3>Gestion de Stock</h3>
+                <p>Application PHP pour les boutiquiers locaux, permettant de gérer l'inventaire et les ventes en temps réel.
+                    "Conception d'une application complète pour la gestion de l'inventaire d'un commerce de proximité.
+                     Ce projet inclut la modélisation de la base de données via la méthode Merise, l'implémentation d'une interface CRUD en PHP et la sécurisation des accès utilisateurs.
+                      Résultat : une réduction des erreurs de stock de 30%."
+                </p>
+                <div class="badges">
+                    <span class="badge php">Langage C</span>
+                    <span class="badge html">MySQL</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/votre-pseudo/gestion-stock" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> Voir le code
+                    </a>
+                </div>
+            </article>
+
+            <article class="skill-card project-card">
+                <img src="../images/poubellle.jpeg" alt="Projet Poubelle Intelligente" class="project-img">
+                <h3>Poubelle Intelligente</h3>
+                <p>Système IoT avec capteur ultrasonique pour l'ouverture automatique et ESP32 pour le suivi à distance.
+                    Projet IoT visant à optimiser la gestion des déchets urbains.
+                     Utilisation d'un capteur à ultrasons pour mesurer le niveau de remplissage en temps réel et d'un servomoteur pour l'ouverture sans contact.
+                      Les données sont transmises via un module ESP32 vers un serveur local pour monitoring. Focus : Hygiène et automatisation."
+                </p>
+                <div class="badges">
+                    <span class="badge esp">ESP32</span>
+                    <span class="badge arduino">C++</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/votre-pseudo/smart-bin" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> Voir le code
+                    </a>
+                </div>
+            </article>
+
+            <article class="skill-card project-card">
+                <img src="../images/Arduino.jpg" alt="Projet RFID" class="project-img">
+                <h3>Système RFID</h3>
+                <p>Dispositif d'ouverture de porte sécurisée par lecture de badge, programmé sur microcontrôleur Arduino.
+                    Développement d'un prototype de contrôle d'accès sécurisé.
+                     Le système compare l'UID du badge scanné avec une base de données interne sur Arduino.
+                      En cas de correspondance, le verrouillage magnétique est libéré. Compétences : Programmation C++, câblage hardware et logique de sécurité
+                </p>
+                <div class="badges">
+                    <span class="badge arduino">Arduino</span>
+                    <span class="badge css">C++</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/votre-pseudo/rfid-lock" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> Voir le code
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 - Portfolio Professionnel | Développeur & Administrateur Réseau</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/public-profile/settings/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
