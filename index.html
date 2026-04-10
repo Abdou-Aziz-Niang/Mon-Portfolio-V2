@@ -3,11 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Accueil</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Portfolio | Abdou Aziz Niang</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Définition de l'animation CSS */
+        @keyframes defilementTexte {
+            0% { transform: translateX(100%); }   /* Départ : complètement à droite, hors de l'écran */
+            100% { transform: translateX(-100%); } /* Arrivée : complètement à gauche, hors de l'écran */
+        }
+        
+        /* Style du conteneur pour cacher ce qui dépasse */
+        .conteneur-defilement {
+            width: 100%;
+            overflow: hidden; /* Cache le texte quand il sort du cadre */
+            white-space: nowrap; /* Empêche le texte de revenir à la ligne */
+            margin-bottom: 10px;
+        }
+        
+        /* Style du texte qui défile */
+        .texte-animé {
+            display: inline-block;
+            color: #3498db;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            
+            /* Application de l'animation */
+            animation: defilementTexte 15s linear infinite; /* 15 secondes pour traverser, mouvement constant, en boucle */
+        }
+        
+        /* Optionnel : Pause au survol de la souris */
+        .conteneur-defilement:hover .texte-animé {
+            animation-play-state: paused;
+        }
+    </style>
 </head>
-<body>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden;">
 
     <nav>
         <ul>
@@ -18,45 +51,55 @@
         </ul>
     </nav>
 
-    <main class="hero">
-        <div class="hero-content">
-            <h1>Bienvenue sur mon Portfolio</h1>
-            <p class="subtitle">Étudiant en 2ème année de Génie Logiciel & Administration Réseau</p>
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 0 10%; flex-wrap: wrap-reverse;">
+        
+        <div style="flex: 1.2; min-width: 320px; display: flex; flex-direction: column; align-items: flex-start; padding: 20px;">
             
-            <p class="description">
-                Passionné par le développement informatique et les systèmes embarqués, 
-                je crée des solutions innovantes alliant performance et simplicité.
-
-                Actuellement en deuxième année de spécialisation, 
-                je développe une expertise hybride entre la création d'applications logicielles (Java, PHP, Python) et l'administration de systèmes réseaux.
-                 Mon approche repose sur la curiosité technique :
-                  de la conception de bases de données relationnelles avec Merise à la mise en œuvre de solutions IoT connectées.
-                   Mon objectif est de bâtir des infrastructures numériques performantes, sécurisées et centrées sur l'utilisateur."
+            <div class="conteneur-defilement">
+                <span class="texte-animé">Bienvenue sur mon portfolio — étudiant —</span>
+            </div>
+            
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: #1a2a3a; margin: 0; line-height: 1.1; font-weight: 800;">
+                Moi c'est <span style="color: #3498db;">Abdou Aziz</span>
+            </h1>
+            
+            <p style="font-size: 1.2rem; color: #4a4a4a; margin: 25px 0 35px 0; max-width: 550px; line-height: 1.6; text-align: left;">
+              étudiant en <strong>Génie Logiciel & Administration Réseau</strong>. 
+                Passionné par le développement et les systèmes embarqués, je crée des solutions innovantes alliant performance et simplicité.
             </p>
 
-            <div class="cta-container">
-                <a href="pages/projets.html" class="btn-primary">
-                    <i class="fas fa-code"></i> Découvrir mes projets
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 35px;">
+                <a href="pages/projets.html" style="text-decoration: none; background: #3498db; color: white; padding: 12px 25px; border-radius: 30px; font-weight: 600; transition: 0.3s; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3); display: flex; align-items: center; gap: 8px;"
+                   onmouseover="this.style.background='#2980b9'; this.style.transform='translateY(-3px)'" 
+                   onmouseout="this.style.background='#3498db'; this.style.transform='translateY(0)'">
+                    <i class="fas fa-code"></i> Projets
                 </a>
-                <a href="pages/contact.html" class="btn-secondary">
-                    <i class="fas fa-envelope"></i> Me contacter
-                </a>
-                <a href="images/CV_Etudiant_Genie_Logiciel.pdf" class="btn-cv" download>
-                    <i class="fas fa-file-pdf"></i> Mon CV
+                
+                <a href="pages/contact.html" style="text-decoration: none; background: white; color: #3498db; padding: 12px 25px; border-radius: 30px; font-weight: 600; border: 2px solid #3498db; transition: 0.3s;"
+                   onmouseover="this.style.background='#3498db'; this.style.color='white'; this.style.transform='translateY(-3px)'" 
+                   onmouseout="this.style.background='white'; this.style.color='#3498db'; this.style.transform='translateY(0)'">
+                    Contactez-moi
                 </a>
             </div>
-        </div>
-    </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 - Portfolio Professionnel | Développeur & Administrateur Réseau</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/public-profile/settings/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+            <div style="display: flex; gap: 20px; font-size: 1.6rem;">
+                <a href="https://github.com/Abdou-Aziz-Niang" target="_blank" style="color: #333; transition: 0.3s;" onmouseover="this.style.color='#3498db'"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/public-profile/settings/" style="color: #0077b5; transition: 0.3s;" onmouseover="this.style.color='#3498db'"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/221771346672" style="color: #25d366; transition: 0.3s;" onmouseover="this.style.color='#3498db'"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
-    </footer>
+
+        <div style="flex: 1; display: flex; justify-content: center; align-items: center; min-width: 350px; padding: 20px;">
+            <div style="position: relative;">
+                <div style="position: absolute; top: 15px; left: 15px; width: 100%; height: 100%; background: #3498db; border-radius: 40px; opacity: 0.1; z-index: -1;"></div>
+                <img src="images/AAN.jpeg" alt="Abdou Aziz Niang" 
+                     style="width: 100%; max-width: 380px; height: auto; border-radius: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: 0.5s; object-fit: cover;"
+                     onmouseover="this.style.transform='scale(1.02)';" 
+                     onmouseout="this.style.transform='scale(1)';">
+            </div>
+        </div>
+
+    </div>
 
 </body>
 </html>
